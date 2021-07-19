@@ -1,12 +1,11 @@
 import React from 'react';
+import ExplanationPage from '../components/Explanation';
 
 function LandingPage() 
 {
   return (
-        <div>
-            <h1>Hello world</h1>
-        </div>
-    )
+        ExplanationPage()
+    );
 }
 
 export default LandingPage;
