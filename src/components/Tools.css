@@ -1,0 +1,19 @@
+.pic-list 
+{
+    list-style-type: none;
+    margin-left: 0px;
+    padding-left: 0px;
+    display:inline-block;
+}
+    
+.pic-list img
+{
+    float: left;
+}
+    
+ .pic-list p,.pic-list h3 
+ {
+    text-align: right; 
+    display:inline-block;
+    padding: 0;
+}
