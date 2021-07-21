@@ -4,7 +4,7 @@ import ExplanationPage from '../components/Explanation';
 function LandingPage() 
 {
   return (
-        ExplanationPage()
+        <ExplanationPage/>
     );
 }
 
