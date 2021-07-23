@@ -1,10 +1,15 @@
 import React from 'react';
 import ExplanationPage from '../components/Explanation';
-
+import TeamComponent from '../components/TeamComponent';
 function LandingPage() 
 {
   return (
-        <ExplanationPage/>
+
+        <div>
+          <ExplanationPage/>;
+          <TeamComponent/>;
+        </div>
+
     );
 }
 
