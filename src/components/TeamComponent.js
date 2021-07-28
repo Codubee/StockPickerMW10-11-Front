@@ -44,8 +44,6 @@ const TeamComponent = (props) => {
         </CardBody>
       </Card>
       <Card>
-        {/* <CardImg src = "https://media.discordapp.net/attachments/867451973200642058/867453039215116359/Picture_of_Me.jpg?width=601&height=1237" 
-        height = "1000" width = "240" alt="Card image cap" /> */}
         <CardBody>
           <CardTitle tag="h5">Kezia Abraham</CardTitle>
           <CardSubtitle tag="h6" className="mb-2 text-muted">University of Texas at Dallas</CardSubtitle>
@@ -59,9 +57,7 @@ const TeamComponent = (props) => {
         </form>
         </CardBody>
       </Card>
-      <Card>
-        {/* <CardImg src = "https://media.discordapp.net/attachments/867451973200642058/867453039215116359/Picture_of_Me.jpg?width=601&height=1237" 
-        height = "1000" width = "240" alt="Card image cap" /> */}
+      <Card>        
         <CardBody>
           <CardTitle tag="h5">Luis Tapia</CardTitle>
           <CardSubtitle tag="h6" className="mb-2 text-muted">University of Texas Rio Grande Valley</CardSubtitle>
@@ -75,9 +71,7 @@ const TeamComponent = (props) => {
         </CardBody>
       </Card>
       <Card>
-        {/* <CardImg src = "https://media.discordapp.net/attachments/867451973200642058/867453039215116359/Picture_of_Me.jpg?width=601&height=1237" 
-        height = "1000" width = "240" alt="Card image cap" /> */}
-        <CardBody>
+         <CardBody>
           <CardTitle tag="h5">Nathan Puskuri</CardTitle>
           <CardSubtitle tag="h6" className="mb-2 text-muted">University of Texas at Dallas</CardSubtitle>
           <CardSubtitle tag="h6" className="mb-2 text-muted">(Sophomore)</CardSubtitle>
