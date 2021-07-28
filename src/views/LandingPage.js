@@ -1,14 +1,15 @@
 import React from 'react';
+import {Container } from 'reactstrap'
 import ExplanationPage from '../components/Explanation';
 import TeamComponent from '../components/TeamComponent';
 function LandingPage() 
 {
   return (
 
-        <div>
-          <ExplanationPage/>;
-          <TeamComponent/>;
-        </div>
+        <Container>
+          <ExplanationPage/>
+          <TeamComponent/>
+        </Container>
 
     );
 }
