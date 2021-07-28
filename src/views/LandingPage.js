@@ -1,6 +1,6 @@
 import React from 'react';
 import Features from '../components/Features';
-//import Tools from '../components/Tools';
+import Tools from '../components/Tools';
 import ExplanationPage from '../components/Explanation';
 import Buttons from '../components/Buttons';
 
@@ -10,6 +10,7 @@ function LandingPage()
         <div>
             <ExplanationPage/>
             <Features></Features>
+            <Tools/>
             <Buttons/>
         </div>
     )
