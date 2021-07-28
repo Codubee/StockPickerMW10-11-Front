@@ -1,12 +1,12 @@
 import React from 'react';
-import './Tools.css';
+import '../styles/Tools.css';
 
 function Tools() 
 {
   return (
-    <div>
+    <div className="text-center">
     <h3> Tools used for this Project</h3>
-      <ul>
+      <ul >
         
         <li class="pic-list">
           <img src="https://pluralsight2.imgix.net/paths/images/nodejs-45adbe594d.png"
