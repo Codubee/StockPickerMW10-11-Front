@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle, Row, Col
+  CardTitle, CardSubtitle, Row, Col,Button
 } from 'reactstrap';
 
 function TeamComponent() {
@@ -21,9 +21,9 @@ function TeamComponent() {
                 I’m super excited to learn more & see how all our projects turn out !!
                 looking forward to connecting with you all.
             </CardText>
-              <form action="https://github.com/sanjanajadhavv">
-                <input type="submit" value="Go to my Github" />
-              </form>
+              <a href="https://github.com/sanjanajadhavv" target="_blank" rel="noreferrer">
+                <Button color = "success">Github</Button>
+              </a>
             </CardBody>
           </Card>
         </Col>
