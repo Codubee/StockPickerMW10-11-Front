@@ -20,7 +20,6 @@ const Navigation = (props) => {
     return (
       <div>
         <Navbar color="light" light expand="md">
-        
           <NavbarBrand href="/"><h5 class="stock-match-item">Stock Match</h5></NavbarBrand>
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>

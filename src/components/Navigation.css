@@ -3,9 +3,6 @@
 }
 
 .nav-item{
-    /*padding-left: 10px;*/
-    /*color: #1a1a1a;*/
-    /*padding-top: 8px;*/
     justify-content: space-between;
     align-items: center;
     display: flex;
@@ -15,9 +12,7 @@
 }
 
 .github-link{
-    /*padding-left: 10px;*/
     color:rgb(114, 114, 114);
-    /*padding-bottom: 10px;*/
     justify-content: space-between;
     align-items: center;
     display: flex;
