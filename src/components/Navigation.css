@@ -1,0 +1,25 @@
+.stock-match-item{
+    padding-right: 11px;
+}
+
+.nav-item{
+    /*padding-left: 10px;*/
+    /*color: #1a1a1a;*/
+    /*padding-top: 8px;*/
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    padding-right: 11px;
+    color:rgb(114, 114, 114);
+    font-size: 105%;
+}
+
+.github-link{
+    /*padding-left: 10px;*/
+    color:rgb(114, 114, 114);
+    /*padding-bottom: 10px;*/
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    font-size: 105%;
+}
