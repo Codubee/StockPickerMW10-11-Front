@@ -7,6 +7,7 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
+import Match from './views/Match';
 
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
           <LandingPage />
         </Route>
         <Route path="/Match">
-          {/* Match component */}
+          <Match/>
         </Route>
         <Route path="/Home">
           <LandingPage />
