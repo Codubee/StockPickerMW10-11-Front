@@ -6,8 +6,8 @@ class Match extends React.Component {
     render() {
         return (
             <div>
-                <Buttons />
                 <View/>
+                <Buttons />
             </div>
         )
     }
