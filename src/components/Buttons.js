@@ -1,13 +1,13 @@
 import React from 'react';
 import { Button } from 'reactstrap';
 
-const Btns = (props) => {
+function Buttons(props){
   return (
-    <div>
+    <div className="text-center">
       <Button color="danger" size= "lg">No</Button>{' '}
       <Button color="success" size= "lg">Yes</Button>{' '}
     </div>
   );
 }
 
-export default Btns;
+export default Buttons;
