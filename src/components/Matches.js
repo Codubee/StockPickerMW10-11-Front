@@ -1,38 +1,25 @@
 import React from 'react';
-import { Table } from 'reactstrap';
 
-const Matches = (props) => {
+function Matches(props){
+
+  const stocks = [
+    { company: "Apple", symbol: "appl", price: 12.98 },
+    { company: "Microsoft", symbol: "msft", price: 15.98 },
+    { company: "Google", symbol: "ggle", price: 20.50 }
+]
   return (
-    <Table>
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>Company Name</th>
-          <th>Symbol</th>
-          <th>Price</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Apple</td>
-          <td>aapl</td>
-          <td>12.98</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Microsoft</td>
-          <td>msft</td>
-          <td>15.67</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Google</td>
-          <td>ggle</td>
-          <td>20.45</td>
-        </tr>
-      </tbody>
-    </Table>
+          <div>
+              <h1>Current Matches</h1>
+              {
+                  
+                      stocks.map((matched, id) => (
+                      <div key={id}>
+                          <p>{matched.company}, {matched.symbol},{matched.price}</p>
+                      </div>
+                  ))
+              }
+          </div>
+
   );
 }
 
