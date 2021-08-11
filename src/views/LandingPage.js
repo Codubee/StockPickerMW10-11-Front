@@ -1,17 +1,22 @@
 import React from 'react';
+import {Container } from 'reactstrap'
+import ExplanationPage from '../components/Explanation';
+import TeamComponent from '../components/TeamComponent';
 import Features from '../components/Features';
 import Tools from '../components/Tools';
-import ExplanationPage from '../components/Explanation';
-
 
 function LandingPage() 
 {
   return (
-        <div>
-            <ExplanationPage/>
-            <Features></Features>
-        </div>
-    )
+
+        <Container>
+          <ExplanationPage/>
+          <Features/>
+          <Tools/>
+          <TeamComponent/>
+        </Container>
+
+    );
 }
 
 export default LandingPage;
