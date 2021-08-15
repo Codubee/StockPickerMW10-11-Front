@@ -1,8 +1,8 @@
 import React from 'react'
 import Buttons from '../components/Buttons'
 import View from '../components/View'
-import Matches from '../components/Matches'
 import {Container} from 'reactstrap'
+import Collapsable from '../components/Collapsable'
 
 class Match extends React.Component {
     render() {
@@ -10,7 +10,7 @@ class Match extends React.Component {
             <Container className="text-center">
                 <View/>
                 <Buttons />
-                <Matches />
+                <Collapsable/>
             </Container>
         )
     }
