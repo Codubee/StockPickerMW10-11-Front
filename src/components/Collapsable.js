@@ -2,18 +2,32 @@ import React, {useState} from 'react';
 import { Collapse, Button } from 'reactstrap'; //Add whatever elements you need 
 import Matches from '../components/Matches'
 
-const Collapsable = (props) => {
-    const [isOpen, setIsOpen] = useState(false);
-    const toggle = () => setIsOpen(!isOpen);
+class Collapsable extends React.Component {
 
-    return (
-        <div>
-            <Button color = "primary" onClick ={toggle} style = {{marginBottom: '1rem'}}>Click me!</Button>
-            <Collapse isOpen={isOpen}> 
-                <Matches />
-            </Collapse>
-        </div>
-    );
+    constructor(props){
+        super(props)
+        this.state = {isOpen:false}
+        this.toggle = this.toggle.bind(this)
+    }
+
+    toggle(){
+        this.setState({isOpen:!this.state.isOpen})
+
+        //Place API call here
+
+    }
+
+    render(){
+        return (
+            <div>
+                <Button color = "primary" onClick ={this.toggle} style = {{marginBottom: '1rem'}}>Click me!</Button>
+                <Collapse isOpen={this.state.isOpen}> 
+                    <Matches />
+                </Collapse>
+            </div>
+        );
+    }
+    
 }
 
 export default Collapsable;
