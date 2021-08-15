@@ -1,19 +1,22 @@
 import React from 'react';
-import Tools from '../components/Tools';
-import Features from '../components/Features';
+import {Container } from 'reactstrap'
 import ExplanationPage from '../components/Explanation';
-import CanCollapse from '../components/canCollapse';
+import TeamComponent from '../components/TeamComponent';
+import Features from '../components/Features';
+import Tools from '../components/Tools';
 
 function LandingPage() 
 {
   return (
-        <div>
-            <ExplanationPage/>
-            <Features></Features>
-            <CanCollapse></CanCollapse>
-            <Tools/>
-        </div>
-  )
+
+        <Container>
+          <ExplanationPage/>
+          <Features/>
+          <Tools/>
+          <TeamComponent/>
+        </Container>
+
+    );
 }
 
 export default LandingPage;
