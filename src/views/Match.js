@@ -3,6 +3,7 @@ import {Button} from 'reactstrap'
 import View from '../components/View'
 import {Container} from 'reactstrap'
 import Collapsable from '../components/Collapsable'
+import '../styles/Match.css'
 
 class Match extends React.Component{
     constructor() {
@@ -26,10 +27,12 @@ class Match extends React.Component{
     render(){
         return(
             <Container className="text-center">
-                <View/>
-                <Button color="danger" size= "lg" onClick={this.No}>No</Button>
-                <Button color="success" size= "lg" onClick={this.Yes}>Yes</Button>
-                <Collapsable/>
+                <View className="pt"/>
+                <div className="pt">
+                    <Button color="danger"  onClick={this.No}>No</Button>
+                    <Button color="success"  onClick={this.Yes}>Yes</Button>
+                </div>
+                <Collapsable className="pt"/>
             </Container>
         )
     }
