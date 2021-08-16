@@ -1,5 +1,9 @@
 import React from 'react'
 import {Button} from 'reactstrap'
+import View from '../components/View'
+import {Container} from 'reactstrap'
+import Collapsable from '../components/Collapsable'
+
 class Match extends React.Component{
     constructor() {
         super()
@@ -21,10 +25,12 @@ class Match extends React.Component{
 
     render(){
         return(
-            <div className="text-center">
+            <Container className="text-center">
+                <View/>
                 <Button color="danger" size= "lg" onClick={this.No}>No</Button>
                 <Button color="success" size= "lg" onClick={this.Yes}>Yes</Button>
-            </div>
+                <Collapsable/>
+            </Container>
         )
     }
 }
