@@ -4,6 +4,7 @@ import View from '../components/View'
 import {Container} from 'reactstrap'
 import Collapsable from '../components/Collapsable'
 import '../styles/Match.css'
+import Description from '../components/Description'
 
 class Match extends React.Component{
     constructor() {
@@ -28,6 +29,7 @@ class Match extends React.Component{
         return(
             <Container className="text-center">
                 <View className="pt"/>
+                <Description/>
                 <div className="pt">
                     <Button color="danger"  onClick={this.No}>No</Button>
                     <Button color="success"  onClick={this.Yes}>Yes</Button>
