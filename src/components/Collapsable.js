@@ -19,7 +19,7 @@ class Collapsable extends React.Component {
 
     render(){
         return (
-            <div>
+            <div className={this.props.className}>
                 <Button color = "primary" onClick ={this.toggle} style = {{marginBottom: '1rem'}}>Click me!</Button>
                 <Collapse isOpen={this.state.isOpen}> 
                     <Matches />
