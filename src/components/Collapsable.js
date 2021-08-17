@@ -12,9 +12,6 @@ class Collapsable extends React.Component {
 
     toggle(){
         this.setState({isOpen:!this.state.isOpen})
-
-        //Place API call here
-
     }
 
     render(){
