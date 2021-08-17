@@ -1,32 +1,5 @@
 import React from 'react';
-import axios from 'axios';
 
-class ApiCall extends React.Component {
-
-  constructor(props) {
-    super(props);
-
-    this.state = { stocks: {} };
-     this.triggerGetApi = this.triggerGetApi.bind(this);
-     this.triggerPostApi = this.triggerPostApi.bind(this);
-     this.triggerDeleteApi = this.triggerDeleteApi.bind(this);
-  }
-}
-
-  function triggerGetApi() {
-
-    axios.get("https://stockpicker-mw11-12-back.herokuapp.com/getMatches?userId=99")
-
-        .then((response) => {
-
-            console.log(response.data);
-
-            this.setState({
-                
-                stocks: response.data
-            })
-        })
-}
 
 class Matches extends React.Component{
 
