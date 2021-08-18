@@ -7,9 +7,9 @@ function Features() {
         <div className="text-center">
             <h1>The following are the features of our application: </h1>
             <ListGroup  className="text-center">
-                <ListGroupItem tag="a" href="#"> Stock Info </ListGroupItem>
-                <ListGroupItem tag="a" href="#"> Potential Matches </ListGroupItem>
-                <ListGroupItem tag="a" href="#"> Stocks You've Matched With </ListGroupItem>
+                <p> Stock Info </p>
+                <p> Potential Matches </p>
+                <p tag="a" href="#"> Stocks You've Matched With </p>
             </ListGroup>
         </div>
     );
