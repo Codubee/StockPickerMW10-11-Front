@@ -1,8 +1,9 @@
 import React from 'react'
+import '../styles/View.css'
 
-function View(){
+function View(props){
     return(
-        <img src="https://picsum.photos/900"></img>
+        <img className={props.className+" view-image"} src="https://picsum.photos/900"></img>
     )
 }
 
