@@ -9,9 +9,7 @@ import axios from 'axios';
 class Match extends React.Component{
     constructor(props) {
         super(props)
-        //Setting a default value
-        super(props);
-        this.state = { data: [],image:''};
+        this.state = { data: {},image:''};
      
         //Bind Methods
         this.Yes= this.Yes.bind(this)

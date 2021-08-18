@@ -17,11 +17,14 @@ class Matches extends React.Component {
     return (
       <div >
         <table className="text-center" style={{ width: "100%" }}>
-          <tr>
-            <th>Company</th>
-            <th>Symbol</th>
-            <th>Price</th>
-          </tr>
+          <thead>
+            <tr>
+              <th>Company</th>
+              <th>Symbol</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody>
           {
 
             stocks.map((matched, id) => (
@@ -33,6 +36,7 @@ class Matches extends React.Component {
               </tr>
             ))
           }
+          </tbody>
         </table>
       </div>
     );

@@ -20,18 +20,18 @@ const Navigation = (props) => {
     return (
       <div>
         <Navbar color="light" light expand="md">
-          <NavbarBrand href="/"><h5 class="stock-match-item">Stock Match</h5></NavbarBrand>
+          <NavbarBrand href="/"><h5 className="stock-match-item">Stock Match</h5></NavbarBrand>
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
             <Nav className="mr-auto" navbar>
               <NavItem>
-                <Link to="/Home" style={{ textDecoration: 'none' }}><h5 class="nav-item">Home</h5></Link>
+                <Link to="/Home" style={{ textDecoration: 'none' }}><h5 className="nav-item">Home</h5></Link>
               </NavItem>
               <NavItem>
-                <Link to="/Match" style={{ textDecoration: 'none' }}><h5 class="nav-item">Match</h5></Link>
+                <Link to="/Match" style={{ textDecoration: 'none' }}><h5 className="nav-item">Match</h5></Link>
               </NavItem>
               <NavItem>
-                <NavLink href="https://github.com/Codubee/StockPickerMW10-11-Front"><h5 class="github-link">GitHub</h5></NavLink>
+                <NavLink href="https://github.com/Codubee/StockPickerMW10-11-Front"><h5 className="github-link">GitHub</h5></NavLink>
               </NavItem>
             </Nav>
           </Collapse>
