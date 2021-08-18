@@ -3,10 +3,10 @@ import React from 'react'
 
 function Description(props){
 
-    if(props.price){
+    if(props.data.currentPrice){
         return(
             <div>
-                <p>{props.companyName}, {props.symbol}, {props.price}</p>
+                <h2>{props.data.companyName}, {props.data.symbol}, {props.data.currentPrice}</h2>
             </div>
         )
     }

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { Collapse, Button } from 'reactstrap'; //Add whatever elements you need 
 import Matches from '../components/Matches'
 
