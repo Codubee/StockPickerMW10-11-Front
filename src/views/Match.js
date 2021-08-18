@@ -28,8 +28,8 @@ class Match extends React.Component{
                 console.log(response.data);
 
                 this.setState({
-                    data: response.data
-
+                    data: response.data,
+                    image:response.data.image
                 })
             })
     }
@@ -45,7 +45,7 @@ class Match extends React.Component{
     render(){
         return(
             <Container className="text-center">
-                <View className="pt"/>
+                <View src={this.state.image}className="pt"/>
                 <Description data = {this.state.data}/>
                 <div className="pt">
                     <Button color="danger"  onClick={this.No}>No</Button>
