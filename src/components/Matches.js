@@ -1,11 +1,24 @@
 import React from 'react';
 import { Button } from 'reactstrap'
+import axios from 'axios'
 
 class Matches extends React.Component {
 
   constructor(props) {
     super(props)
+    this.apiTrigger = this.apiTrigger.bind(this);
   }
+
+  apiTrigger() {
+    axios.delete("https://stockpicker-mw11-12-back.herokuapp.com/deleteStock?userId=99&stockId=1")
+    .then((response) => {
+        alert('deleted')
+    })
+    .catch((err)=>{
+      alert('not deleted')
+    })
+    
+  } 
 
   render() {
 
@@ -32,7 +45,7 @@ class Matches extends React.Component {
                 <td>{matched.company}</td>
                 <td>{matched.symbol}</td>
                 <td>{matched.price}</td>
-                <td><Button size="sm">Delete</Button></td>
+                <td><Button size="sm" onClick={this.apiTrigger}>Delete</Button></td>
               </tr>
             ))
           }
