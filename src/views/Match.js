@@ -56,6 +56,7 @@ class Match extends React.Component{
         axios.post("https://stockpicker-mw11-12-back.herokuapp.com/addStock", body)
             .then((response) => {
                 alert('added')
+                this.getStock();
                 
             })
     }
