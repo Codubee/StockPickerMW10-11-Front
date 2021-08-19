@@ -8,25 +8,19 @@ class Collapsable extends React.Component {
 
     constructor(props){
         super(props);
-        this.state = {isOpen:false};
+        this.state = {isOpen:false,matches:[]};
         this.toggle = this.toggle.bind(this);
     }
 
     toggle(){
         this.setState({isOpen:!this.state.isOpen});
-    }
-
-    triggerGetApi(){
-
-        axios.get("https://stockpicker-mw11-12-back.herokuapp.com/getMatches?userId=99")
+        axios.get("https://stockpicker-mw11-12-back.herokuapp.com/getMatches?userId="+this.props.userId)
 
             .then((response) => {
 
-                console.log(response.data);
-
                 this.setState({
                     
-                    stocks: response.data
+                    matches: response.data.matches
                 })
             })
     }
@@ -36,7 +30,7 @@ class Collapsable extends React.Component {
             <div className={this.props.className}>
                 <Button color = "primary" onClick ={this.toggle} style = {{marginBottom: '1rem'}}>View Matches</Button>
                 <Collapse isOpen={this.state.isOpen}> 
-                    <Matches />
+                    <Matches matches={this.state.matches} userId={this.props.userId} />
                 </Collapse>
             </div>
         );
