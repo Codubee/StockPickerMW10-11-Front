@@ -1,5 +1,4 @@
 import React from 'react'
-import View from '../components/View'
 import { Container,Button } from 'reactstrap'
 import Collapsable from '../components/Collapsable'
 import '../styles/Match.css'
@@ -10,17 +9,21 @@ import axios from 'axios';
 class Match extends React.Component{
     constructor(props) {
         super(props)
-        this.state = { data: {},image:''};
+        this.state = { data: {},image:'',userId:Math.floor(Math.random() * 9999)};
 
      
         //Bind Methods
         this.Yes= this.Yes.bind(this)
         this.No= this.No.bind(this)
         this.addStock = this.addStock.bind(this);
+        this.getStock = this.getStock.bind(this)
     }
     
     componentDidMount() {
+        this.getStock();
+    }   
 
+    getStock(){
         // Sending a GET http request
         axios.get("https://stockpicker-mw11-12-back.herokuapp.com/getStockData")
 
@@ -38,36 +41,34 @@ class Match extends React.Component{
     }
 
     Yes() {
-        alert('clicked yes')
         this.addStock()
     }
     No() {
-        alert('clicked no')
+        this.getStock()
     }
 
     addStock() {
         var body = {
-            "userId":"20",
-            "stock":{"companyName":"Microsoft","symbol":"MSFT","image":"","stockId":"19"}
+            "userId":this.state.userId,
+            "stock":this.state.data
         }
 
         axios.post("https://stockpicker-mw11-12-back.herokuapp.com/addStock", body)
             .then((response) => {
-                console.log(response.data);
+                alert('added')
                 
             })
     }
 
     render(){
         return(
-            <Container className="text-center">
-                <View src={this.state.image}className="pt"/>
+            <Container className="text-center pt">
                 <Description data = {this.state.data}/>
                 <div className="pt">
-                    <Button color="danger"  onClick={this.No}>No</Button>
-                    <Button color="success"  onClick={this.Yes}>Yes</Button>
+                    <Button color="danger"  onClick={this.No}>Sell</Button>
+                    <Button color="success" className="ml"  onClick={this.Yes}>Hold</Button>
                 </div>
-                <Collapsable className="pt"/>
+                <Collapsable className="pt" userId={this.state.userId}/>
             </Container>
         )
     }

@@ -9,50 +9,50 @@ class Matches extends React.Component {
     this.apiTrigger = this.apiTrigger.bind(this);
   }
 
-  apiTrigger() {
-    axios.delete("https://stockpicker-mw11-12-back.herokuapp.com/deleteStock?userId=99&stockId=1")
-    .then((response) => {
-        alert('deleted')
-    })
-    .catch((err)=>{
-      alert('not deleted')
-    })
-    
-  } 
+  apiTrigger(stockId) {
+    console.log(stockId)
+    axios.delete("https://stockpicker-mw11-12-back.herokuapp.com/deleteStock?userId=" + this.props.userId + "&stockId=" + stockId)
+      .then((response) => {
+        alert('Deleted. Please refresh by clicking the matces button again')
+      })
+      .catch((err) => {
+        alert('Not deleted')
+      })
+
+  }
 
   render() {
 
-    const stocks = [
-      { company: "Apple", symbol: "appl", price: 12.98 },
-      { company: "Microsoft", symbol: "msft", price: 15.98 },
-      { company: "Google", symbol: "ggle", price: 20.50 }
-    ]
-    return (
-      <div >
-        <table className="text-center" style={{ width: "100%" }}>
-          <thead>
-            <tr>
-              <th>Company</th>
-              <th>Symbol</th>
-              <th>Price</th>
-            </tr>
-          </thead>
-          <tbody>
-          {
-
-            stocks.map((matched, id) => (
-              <tr key={id}>
-                <td>{matched.company}</td>
-                <td>{matched.symbol}</td>
-                <td>{matched.price}</td>
-                <td><Button size="sm" onClick={this.apiTrigger}>Delete</Button></td>
+    if (this.props.matches) {
+      return (
+        <div >
+          <table className="text-center" style={{ width: "100%" }}>
+            <thead>
+              <tr>
+                <th>Company</th>
+                <th>Symbol</th>
+                <th>Price</th>
               </tr>
-            ))
-          }
-          </tbody>
-        </table>
-      </div>
-    );
+            </thead>
+            <tbody>
+              {
+
+                this.props.matches.map((matched, id) => (
+                  <tr key={id}>
+                    <td>{matched.companyName}</td>
+                    <td>{matched.symbol}</td>
+                    <td>{matched.currentPrice}</td>
+                    <td><Button size="sm" onClick={()=>this.apiTrigger(matched.stockId)}>Delete</Button></td>
+                  </tr>
+                ))
+              }
+            </tbody>
+          </table>
+        </div>
+      );
+    }
+    else
+      return <h3>No matches yet</h3>
   }
 }
 
