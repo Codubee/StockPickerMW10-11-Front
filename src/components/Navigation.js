@@ -31,10 +31,10 @@ const Navigation = (props) => {
                 <Link to="/Match" style={{ textDecoration: 'none' }}><h5 className="nav-item">Match</h5></Link>
               </NavItem>
               <NavItem>
-                <NavLink href="https://github.com/Codubee/StockPickerMW10-11-Front"><h5 className="github-link">FrontEndGitHub</h5></NavLink>
+                <NavLink href="https://github.com/Codubee/StockPickerMW10-11-Front" target="_blank"><h5 className="github-link">FrontEndGitHub</h5></NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="https://github.com/Codubee/StockPickerMW11-12-Back"><h5 className="github-link">BackEndGitHub</h5></NavLink>
+                <NavLink href="https://github.com/Codubee/StockPickerMW11-12-Back" target="_blank"><h5 className="github-link">BackEndGitHub</h5></NavLink>
               </NavItem>
             </Nav>
           </Collapse>
